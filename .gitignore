@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+data/
+models/
+*.h5
+*.pt
+*.pth
+.DS_Store
+node_modules/
+/dist
