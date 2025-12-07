@@ -19,3 +19,16 @@ Run locally with Docker (recommended). This MVP provides:
 
 ```bash
 docker compose up --build
+```
+2. Backend API available at http://localhost:8000
+
+- POST /upload - upload a CSV file
+- POST /pipeline/run - submit pipeline JSON (see examples/sample_pipeline.json)
+- GET /status/{job_id} - check job status
+- GET /model/download/{job_id} - download model artifact (zip)
+- POST /predict/{job_id} - quick predict using JSON payload
+
+### Notes
+
+- This is an MVP skeleton. You will want to improve/secure connectors, add queueing (Redis/celery), and harden execution before production.
+- For GPU support, build a GPU-capable image and run with nvidia runtime on host.
